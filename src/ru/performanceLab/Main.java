@@ -6,14 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        long m = System.currentTimeMillis();
-
         if (args.length != 2) {
             System.out.println("Введено неправильное количество аргументов.");
         } else {
             splitFile(new File("main.log.2014-11-17.TXT"), args[0], Integer.parseInt(args[1]));
         }
-        System.out.println((double) (System.currentTimeMillis() - m));
     }
 
     private static void splitFile(File file, String fileName, int rowCount) {
